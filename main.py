@@ -16,5 +16,8 @@ def send_telegram(message):
 # ==== MAIN ====
 print("✅ Profits with Sonkar™ scalping bot is now running...")
 send_telegram("🟢 Test alert: Profits with Sonkar™ bot has started successfully!")
-time.sleep(5)
 print("✅ Test completed. Telegram message sent.")
+
+# Prevent early exit
+while True:
+    time.sleep(60)  # keep alive so Render doesn't mark it as failed
